@@ -176,9 +176,20 @@
             </div>
         </div>
     </div>
+<audio id="birthdayAudio" src="./music/LVO.mp3" loop></audio>
 
 </body>
 <script>
+
+window.addEventListener('load', function() {
+    var audio = document.getElementById('birthdayAudio');
+    audio.play().catch(function(error) {
+        console.log('Автозапуск заблокирован браузером, пользователь должен взаимодействовать.', error);
+    });
+});
+
+
+    
     let datetxt = "12월 19일";
     let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
     let titleLetter = "To you";
